@@ -21,7 +21,7 @@ const Offers = () => {
       items: ['Custom Tailored Design', 'Responsive Layouts', 'Custom Tailored Design'],
       button: 'Schedule a consultation',
       green: true, black: false, white: false,
-      image: 'Logo'
+      image: 'https://websitedemos.net/web-designer-portfolio-02/wp-content/uploads/sites/1513/2025/01/Portfolio-Img-1.png'
     },
     {
       title: 'Development',
@@ -29,7 +29,7 @@ const Offers = () => {
       items: ['HTML, CSS, & JS Expertise', 'Cross-Browser Compatibility', 'Faster Load Times'],
       button: 'Schedule a consultation',
       green: false, black: true, white: false,
-      image: 'Logo'
+      image: 'https://websitedemos.net/web-designer-portfolio-02/wp-content/uploads/sites/1513/2025/01/Portfolio-Img-1.png'
     },
     {
       title: 'Brand Identity',
@@ -37,7 +37,7 @@ const Offers = () => {
       items: ['Logo Design', 'Cohesive Color Palettes', 'Brand Guidelines'],
       button: 'Schedule a consultation',
       green: false, black: false, white: true,
-      image: 'Logo'
+      image: 'https://websitedemos.net/web-designer-portfolio-02/wp-content/uploads/sites/1513/2025/01/Portfolio-Img-1.png'
     },
   ];
 
@@ -65,11 +65,14 @@ const Offers = () => {
             `}
           >
             <div>
-              {d.image ? (
-                <img src={d.image} alt="Logo" className="mb-4 w-10 h-10" />
-              ) : (
-                <div className="mb-4 w-10 h-10" />
-              )}
+              <img
+                src={d.image}
+                alt={d.title}
+                className="mb-4 w-10 h-10 object-cover rounded-full"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                }}
+              />
 
               <h1 className="text-[32px] font-semibold mb-2">{d.title}</h1>
 

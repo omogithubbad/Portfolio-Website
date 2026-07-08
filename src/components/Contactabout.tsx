@@ -2,9 +2,9 @@ import React from 'react';
 import { GoDotFill } from 'react-icons/go';
 import { HiArrowTurnDownRight, HiMiniArrowTurnDownRight } from 'react-icons/hi2';
 
-const Contactus = () => {
+const Contactabout = () => {
   return (
-    <section className="bg-[#111111] pt-30 text-[#FFFFFF]">
+    <section className="bg-[#1A1A1A] pt-30 text-[#FFFFFF]">
       <div className="flex flex-col justify-center items-center bg-[#0d0d0d] mx-20 py-21 rounded-3xl">
         <span className="ring-1 ring-gray-600 ring-offset-gray-100 rounded-full px-4 mb-2 py-1 flex w-fit items-center justify-center text-[#ffffff] text-[16px] font-[figtree,san-serif] ">
           <GoDotFill className="text-[#82FF1F] text-2xl " />
@@ -35,4 +35,4 @@ const Contactus = () => {
   );
 };
 
-export default Contactus;
+export default Contactabout;

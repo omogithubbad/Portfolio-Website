@@ -12,45 +12,50 @@ type Data = {
 
 const data: Data[] = [
   {
-    title: 'Tailored Design',
+    title: 'Personalized Approach',
     description:
-      'I believe that every brand is unique and deserves a website that is just as distinctive.',
+      'Every project is unique, and I tailor my approach to fit your specific needs and goals.',
     icon: <PiAsterisk className="text-[#82FF1F] text-2xl" />,
   },
   {
-    title: 'User-Centric Approach',
+    title: 'Clear Communication',
     description:
-      'With a strong focus on user experience, I design websites that are intuitive and easy to navigate.',
+      'I keep you informed at every stage of the process and provide you regular updates.',
     icon: <TbCircles className="text-[#82FF1F] text-2xl" />,
   },
   {
-    title: 'Trending Technologies',
+    title: 'After Support',
     description:
-      'I stay at the forefront of web design trends and technologies to offer you the most innovative solutions.',
+      "My commitment to your success doesn't end at launch. I provide after launch support. Have Project in Mind?",
     icon: <BsGrid className="text-[#82FF1F] text-2xl" />,
   },
 ];
 
-const Choseme = () => {
+const Whattoexpect = () => {
   return (
     <section className="bg-[#F8F8F8] py-20 px-20">
       <div>
         <h1 className="text-[#1A1A1A] ring-1 rounded-full w-fit ring-offset-gray-100 ring-gray-800 px-4 py-0.5 font-figtree text-[16px] flex items-center justify-center">
           <GoDotFill className="text-[#82FF1F] text-2xl" />
-          WHY CHOOSE ME
+          MY PHILOSOPHY
         </h1>
         <h1 className="font-extralight text-[80px] text-[#111111] font-verdana">
-          Why Work with Me
+          What to Expect
         </h1>
       </div>
 
       <div className="grid grid-cols-3 gap-10 my-17">
         {data.map((d, index) => (
-          <div key={index} className="bg-[#ffffff] shadow-md py-10 px-10 rounded-3xl">
+          <div
+            key={index}
+            className="bg-[#ffffff] shadow-md py-10 px-10 rounded-3xl"
+          >
             <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-6">
               {d.icon}
             </div>
-            <h1 className="font-verdana text-[#1A1A1A] text-2xl mb-3">{d.title}</h1>
+            <h1 className="font-verdana text-[#1A1A1A] text-2xl mb-3">
+              {d.title}
+            </h1>
             <p className="text-[#1A1A1A] font-figtree">{d.description}</p>
           </div>
         ))}
@@ -59,4 +64,4 @@ const Choseme = () => {
   );
 };
 
-export default Choseme;
+export default Whattoexpect;
