@@ -1,33 +1,39 @@
 import React from 'react';
 import { GoDotFill } from 'react-icons/go';
 import { HiMiniArrowTurnDownRight } from 'react-icons/hi2';
+import coffee from '../assets/coffee.png';
 
 type Portfolio = {
   title: string;
   year: number;
   image: string;
+  link: string; // 👈 the URL to the live website
 };
 
 const data: Portfolio[] = [
   {
-    title: 'Project Name Here',
+    title: 'Coffee Landing Page',
     year: 2023,
-    image: '', // 👈 replace
+    image: coffee, // 👈 replace
+    link: 'https://manasseh-edwin-coffee-project-01.netlify.app/', // 👈 replace
   },
   {
     title: 'Project Name Here',
     year: 2024,
-    image: '', // 👈 replace
+    image: '/images/project2.png',
+    link: 'https://yourproject2.com',
   },
   {
     title: 'Project Name Here',
     year: 2025,
-    image: '', // 👈 replace
+    image: '/images/project3.png',
+    link: 'https://yourproject3.com',
   },
   {
     title: 'Project Name Here',
     year: 2026,
-    image: '', // 👈 replace
+    image: '/images/project4.png',
+    link: 'https://yourproject4.com',
   },
 ];
 
@@ -46,23 +52,38 @@ const Projects = () => {
 
       <div className="grid grid-cols-2 text-[#f8f8f8] gap-5">
         {data.map((p, index) => (
-          <article
+          <a
             key={index}
-            className="ring-1 ring-gray-600 rounded-2xl overflow-hidden"
+            href={p.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ring-1 ring-gray-600 rounded-2xl overflow-hidden block group"
           >
-            <header className="flex justify-between items-center p-10">
-              <h3>{p.title}</h3>
-              <p>{p.year}</p>
-            </header>
-            <img
-              src={p.image}
-              alt={p.title}
-              className="w-full h-auto"
-              onError={(e) => {
-                (e.target as HTMLImageElement).style.display = 'none';
-              }}
-            />
-          </article>
+            <article>
+              <header className="flex justify-between items-center p-10">
+                <h3 className="flex items-center gap-2">
+                  <HiMiniArrowTurnDownRight className="text-[#82FF1F]" />
+                  {p.title}
+                </h3>
+                <p>{p.year}</p>
+              </header>
+              <div className="w-full aspect-4/3 overflow-hidden relative">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <span className="text-[#2f2f2f] text-sm font-figtree flex items-center gap-2 ring-1 bg-[#82FF1F] rounded-full px-4 py-2">
+                    Visit site <HiMiniArrowTurnDownRight />
+                  </span>
+                </div>
+              </div>
+            </article>
+          </a>
         ))}
       </div>
 
