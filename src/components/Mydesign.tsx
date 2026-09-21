@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { GoDotFill } from 'react-icons/go';
 import { FaCheckCircle } from 'react-icons/fa';
 import { GiMedal } from 'react-icons/gi';

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { HiMiniArrowTurnDownRight } from 'react-icons/hi2';
 import myimage from '../assets/Manasseh1.png';
 

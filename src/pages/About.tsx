@@ -1,4 +1,3 @@
-import React from 'react';
 import Myworld from '../components/Myworld';
 import Experience from '../components/Experience';
 import Travelling from '../components/Travelling';

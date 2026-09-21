@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { GoDotFill } from 'react-icons/go';
 import { HiMiniArrowTurnDownRight } from 'react-icons/hi2';
 import coffee from '../assets/coffee.png';

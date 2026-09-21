@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { GoDotFill } from 'react-icons/go';
 import { PiAsterisk } from 'react-icons/pi';
 import { TbCircles } from 'react-icons/tb';

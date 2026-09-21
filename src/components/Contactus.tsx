@@ -1,6 +1,5 @@
-import React from 'react';
 import { GoDotFill } from 'react-icons/go';
-import { HiArrowTurnDownRight, HiMiniArrowTurnDownRight } from 'react-icons/hi2';
+import { HiArrowTurnDownRight } from 'react-icons/hi2';
 
 const Contactus = () => {
   return (
